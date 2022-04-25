@@ -63,7 +63,7 @@ try{
     if(bryptjson.compareSync(req.body.password,user.password))
     {
         const token=generatetoken(user)
-    res.status(200).send({token:token,name:user.name,email:user.email,usertype:user.usertype,phonenumber:user.phonenumber,address:user.address})
+    res.status(200).send({token:token,name:user.name,email:user.email,usertype:user.usertype,phonenumber:user.phonenumber,address:user.address,id:user._id})
     
     }
     else{

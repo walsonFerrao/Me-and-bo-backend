@@ -4,7 +4,7 @@ const mongoose=require("mongoose")
 
 
 const {register,login}=require("./Controllers/authentication")
-
+const Service= require("./Controllers/servicecontroller")
 
 const connect=function(){
 
@@ -17,6 +17,7 @@ app.use(express.json())
 
 app.post("/register",register)
 app.post("/login",login)
+app.use("/service",Service)
 
 
 
