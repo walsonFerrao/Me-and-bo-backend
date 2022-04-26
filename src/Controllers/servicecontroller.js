@@ -48,7 +48,28 @@ res.status(500).send(err)
 })
 
 
+router.get("/:id",async (req,res)=>{
 
+    try{
+    
+    const service=await Service.findById(req.params.id).lean().exec()
+    
+    res.status(201).send(service)
+    
+    
+    
+    }
+    catch(err)
+    {
+    
+    console.log(err)
+    res.status(500).send(err)
+    
+    
+    }
+    
+    
+    })
 
 
 
