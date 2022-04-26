@@ -24,6 +24,32 @@ res.status(201).send(service)
 
 })
 
+router.get("",async (req,res)=>{
+
+try{
+
+const service=await Service.find().lean().exec()
+
+res.status(201).send(service)
+
+
+
+}
+catch(err)
+{
+
+console.log(err)
+res.status(500).send(err)
+
+
+}
+
+
+})
+
+
+
+
 
 
 module.exports=router
