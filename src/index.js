@@ -27,12 +27,12 @@ app.use("/service",Service)
 
 
 
-app.listen(8080||PORT,async (req,res)=>{
+app.listen(process.env.PORT||8080,async (req,res)=>{
 
 try{
 
 await connect("mongodb+srv://walson:123@cluster0.2g6a8.mongodb.net/test")
-console.log("you are lsitening to 1080")
+console.log("you are lsitening to 8080")
 
 }
 catch(err)
