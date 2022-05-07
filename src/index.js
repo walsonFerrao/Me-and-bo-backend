@@ -27,7 +27,7 @@ app.use("/service",Service)
 
 
 
-app.listen(1080,async (req,res)=>{
+app.listen(8080||PORT,async (req,res)=>{
 
 try{
 
